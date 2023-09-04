@@ -1,11 +1,11 @@
-/*const quizData = [
+const quizData = [
   {
     question: "Which language runs in a web browser?",
     a: "Java",
     b: "C",
     c: "Python",
     d: "JavaScript",
-    correct: "d",
+    correct: "d"
   },
   {
     question: "What does CSS stand for?",
@@ -13,7 +13,7 @@
     b: "Cascading Style Sheets",
     c: "Cascading Simple Sheets",
     d: "Cars SUVs Sailboats",
-    correct: "b",
+    correct: "b"
   },
   {
     question: "What does HTML stand for?",
@@ -21,7 +21,7 @@
     b: "Hypertext Markdown Language",
     c: "Hyperloop Machine Language",
     d: "Helicopters Terminals Motorboats Lamborginis",
-    correct: "a",
+    correct: "a"
   },
   {
     question: "What year was JavaScript launched?",
@@ -29,18 +29,9 @@
     b: "1995",
     c: "1994",
     d: "none of the above",
-    correct: "b",
-  },
-];*/
-
-const myreq = new XMLHttpRequest();
-myreq.open("GET", "./../text.json");
-myreq.send();
-//console.log(myreq);
-myreq.onreadystatechange = function() {
-    if (this.readyState === 4 && this.status === 200) {
-        let quizData = JSON.parse(this.responseText);
-
+    correct: "b"
+  }
+];
         const quiz = document.getElementById("quiz");
         const answerElements = document.querySelectorAll(".answer");
         const questionElement = document.getElementById("question");
@@ -92,5 +83,3 @@ myreq.onreadystatechange = function() {
                     }
                 }
             });
-    }
-}
